@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        git url: 'https://github.com/DavidSanchez2000/endabank-frontend.git', branch: 'development'
+        git url: 'https://github.com/alejosuaza1022/endabank-backend.git', branch: 'development'
         sh '''
             cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/
             npm install --legacy-peer-deps
