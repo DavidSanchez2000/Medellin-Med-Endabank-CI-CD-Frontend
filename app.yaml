@@ -1,5 +1,8 @@
 service: qa-env
 runtime: nodejs16
+env: flex
+automatic_scaling:
+   min_num_instances: 1
 handlers:
 # Serve all static files with url ending with a file extension
 - url: /(.*\..+)$
