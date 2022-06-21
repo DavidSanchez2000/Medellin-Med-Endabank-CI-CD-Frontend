@@ -1,6 +1,5 @@
-
-runtime: nodejs16
 service: qa-env
+runtime: nodejs16
 env: flex
 automatic_scaling:
    min_num_instances: 1
