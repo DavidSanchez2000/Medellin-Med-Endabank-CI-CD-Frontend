@@ -1,5 +1,8 @@
 runtime: nodejs16
-service: qa-env
+#service: qa-env
+env_variables:
+  BACK_URL: "http://35.202.242.69:8081/api/v1"
+
 handlers:
 # Serve all static files with url ending with a file extension
 - url: /(.*\..+)$
@@ -9,5 +12,3 @@ handlers:
 - url: /.*
   static_files: dist/index.html
   upload: dist/index.html
-env_variables:
-  BACK_URL: "http://35.202.242.69:8081/api/v1"
