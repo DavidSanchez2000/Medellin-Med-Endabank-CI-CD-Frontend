@@ -20,7 +20,7 @@ pipeline {
             gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
             gsutil cp -r /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/dist gs://medellin-med-endabank-frotend4/
             cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/
-            gcloud app deploy
+            gcloud app deploy qa.yaml
             
           '''
         }
