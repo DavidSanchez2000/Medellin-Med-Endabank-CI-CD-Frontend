@@ -5,7 +5,7 @@ pipeline {
       steps {
         git url: 'https://github.com/alejosuaza1022/endabank-frontend.git', branch: 'testing'
         sh '''
-            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/
+            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend-QA/
             npm install --legacy-peer-deps
             npm run build
             npm cache --force clean
