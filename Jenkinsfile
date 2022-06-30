@@ -5,7 +5,7 @@ pipeline {
       steps {
         git url: 'https://github.com/alejosuaza1022/endabank-frontend.git', branch: 'development'
         sh '''
-            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/
+            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend-Development/
             npm install --legacy-peer-deps
             npm run build
             npm cache --force clean
@@ -18,8 +18,8 @@ pipeline {
           sh '''
             gcloud version
             gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
-            gsutil cp -r /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/dist gs://medellin-med-endabank-frotend4/
-            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend/
+            gsutil cp -r /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend-Development/dist gs://medellin-med-endabank-frotend4/
+            cd /var/lib/jenkins/workspace/CI-CD-Endabank-Frontend-Development/
             gcloud app deploy
             
           '''
